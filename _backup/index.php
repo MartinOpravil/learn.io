@@ -7,9 +7,7 @@
     echo "Failed to connect to MySQL: " . mysqli_connect_error();
     exit();
   }
-
   $search = "";
-  
   if (isset($_POST["submit_search"])) {
     $search = $_POST["search"];
     $sql = "SELECT * FROM courses WHERE title LIKE '%$search%'";
@@ -101,7 +99,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Learn.io - Online Courses </title>
+  <title>Abrakadabra | Online Courses </title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">

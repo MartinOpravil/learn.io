@@ -1,0 +1,754 @@
+@import "variables";
+@import "mixins";
+
+section {
+    padding: 50px 0;
+}
+
+body {
+    background-color: #212832;
+}
+
+.header {
+    padding: 100px 0 130px;
+}
+
+.navbar {
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+.top {
+    //background: linear-gradient(to right, $dark-red, $dark-orange, $light-orange, $light-yellow);
+    background: linear-gradient(to right, $dark-blue, $dark-green, $light-green, $light-blue);
+    height: 5px;
+}
+
+header {
+    //background-color: #cd7e00;
+    /*background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg stroke='%23000' stroke-width='66.7' stroke-opacity='0.05' %3E%3Ccircle fill='%23cd7e00' cx='0' cy='0' r='1800'/%3E%3Ccircle fill='%23ca7110' cx='0' cy='0' r='1700'/%3E%3Ccircle fill='%23c6641a' cx='0' cy='0' r='1600'/%3E%3Ccircle fill='%23c05822' cx='0' cy='0' r='1500'/%3E%3Ccircle fill='%23b94d28' cx='0' cy='0' r='1400'/%3E%3Ccircle fill='%23b1422d' cx='0' cy='0' r='1300'/%3E%3Ccircle fill='%23a83731' cx='0' cy='0' r='1200'/%3E%3Ccircle fill='%239e2e34' cx='0' cy='0' r='1100'/%3E%3Ccircle fill='%23932536' cx='0' cy='0' r='1000'/%3E%3Ccircle fill='%23871e38' cx='0' cy='0' r='900'/%3E%3Ccircle fill='%237b1739' cx='0' cy='0' r='800'/%3E%3Ccircle fill='%236e1238' cx='0' cy='0' r='700'/%3E%3Ccircle fill='%23610e37' cx='0' cy='0' r='600'/%3E%3Ccircle fill='%23530b35' cx='0' cy='0' r='500'/%3E%3Ccircle fill='%23460932' cx='0' cy='0' r='400'/%3E%3Ccircle fill='%2339072e' cx='0' cy='0' r='300'/%3E%3Ccircle fill='%232c0529' cx='0' cy='0' r='200'/%3E%3Ccircle fill='%23210024' cx='0' cy='0' r='100'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;*/
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg stroke='%23000' stroke-width='66.7' stroke-opacity='0.05' %3E%3Ccircle fill='%233b5fb0' cx='0' cy='0' r='1800'/%3E%3Ccircle fill='%232666b5' cx='0' cy='0' r='1700'/%3E%3Ccircle fill='%23006dba' cx='0' cy='0' r='1600'/%3E%3Ccircle fill='%230073bd' cx='0' cy='0' r='1500'/%3E%3Ccircle fill='%230079c0' cx='0' cy='0' r='1400'/%3E%3Ccircle fill='%23007fc1' cx='0' cy='0' r='1300'/%3E%3Ccircle fill='%230085c2' cx='0' cy='0' r='1200'/%3E%3Ccircle fill='%23008ac1' cx='0' cy='0' r='1100'/%3E%3Ccircle fill='%230090c0' cx='0' cy='0' r='1000'/%3E%3Ccircle fill='%230095bf' cx='0' cy='0' r='900'/%3E%3Ccircle fill='%23009abc' cx='0' cy='0' r='800'/%3E%3Ccircle fill='%23009fb9' cx='0' cy='0' r='700'/%3E%3Ccircle fill='%2300a3b6' cx='0' cy='0' r='600'/%3E%3Ccircle fill='%2300a8b2' cx='0' cy='0' r='500'/%3E%3Ccircle fill='%2300acae' cx='0' cy='0' r='400'/%3E%3Ccircle fill='%2300b0aa' cx='0' cy='0' r='300'/%3E%3Ccircle fill='%230eb4a6' cx='0' cy='0' r='200'/%3E%3Ccircle fill='%2333b8a2' cx='0' cy='0' r='100'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+
+    .bg-dark {
+        background-color: #2c3033 !important;
+    }
+
+
+    .header {
+
+        .del {
+
+            @include mQ(600px) {
+                margin-right: 0px;
+            }
+
+
+        }
+
+        h1 {
+            margin-bottom: 1.1rem;
+            font-size: 3rem;
+        }
+
+        p {
+            margin-bottom: 2rem;
+        }
+
+        form {
+
+
+            @include mQ(600px) {
+                margin-left: 15px;
+            }
+
+            .form-control {
+                position: relative;
+
+                @include mQ(600px) {
+                    width: 95%;
+                }
+
+            }
+
+            .has-search .form-control {
+                padding-left: 2.375rem;
+                border: none;
+                border-top-left-radius: 3px;
+                border-bottom-left-radius: 3px;
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+                height: 55px;
+                box-shadow: 20px 6px 15px rgba(0, 0, 0, 0.5);
+            }
+
+            span {
+                position: absolute;
+                z-index: 2;
+                display: block;
+                width: 38px;
+                line-height: 55px;
+                text-align: center;
+                pointer-events: none;
+                color: #aaa;
+            }
+
+            .btn {
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+                border-top-right-radius: 3px;
+                border-bottom-right-radius: 3px;
+                position: absolute;
+                top: 0;
+                right: 0;
+                //background-color: $dark-orange;
+                //border: 1px solid $dark-orange;
+                background-color: $dark-blue;
+                border: 1px solid $dark-blue;
+                height: 55px;
+                width: 120px;
+
+                @include mQ(600px) {
+
+                    height: 55px;
+                    right: 20px;
+                }
+
+                &:hover {
+                    //background-color: #d44848;
+                    background-color: #3c77bb;
+                }
+            }
+
+
+        }
+    }
+}
+
+
+
+footer {
+    background: #181b22;
+}
+
+
+#courses {
+
+    padding: 0 5rem;
+
+    form {
+        background: white;
+        padding: 3rem;
+        box-shadow: 3px 2px 8px rgba(0, 0, 0, 0.5);
+        border-radius: 4px;
+
+        label {
+            width: 100%;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            padding: .375rem 1.5rem;
+        }
+
+        select {
+            border: none;
+            box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.22);
+            width: 100%;
+            padding: 15px;
+            outline: none;
+            font-weight: 600;
+            border-radius: 4px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background: transparent;
+            background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='35' viewBox='0 0 24 24' width='35' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+            background-repeat: no-repeat;
+            background-position-x: 97%;
+            background-position-y: 9px;
+
+        }
+
+        span {
+            font-size: 1.1rem;
+        }
+
+        input[type=checkbox] {
+            transform: scale(1.5);
+            margin: 0 5px;
+        }
+
+        span,
+        input[type=checkbox] {
+            margin-bottom: 10px;
+        }
+    }
+
+    a {
+        color: $black;
+        text-decoration: none;
+    }
+
+    .card {
+        border: none;
+        //border-top: 6px solid $dark-orange;
+        border-top: 6px solid $dark-blue;
+        border-radius: .25rem;
+        padding: 15px 0 0;
+        transition: transform 0.3s ease-in-out;
+
+        &:hover {
+            transform: scale(1.02);
+        }
+
+        &:hover .card-edit {
+            opacity: 1;
+            visibility: visible;
+            margin-top: 0px;
+        }
+
+        .card-edit {
+            width: 40px;
+            height: 40px;
+            background: $dark-blue;
+            position: absolute;
+            top: 17px;
+            right: 18px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: ease-in-out 0.3s;
+            margin-top: 10px;
+
+            &:hover {
+                background-color: #3c77bb;
+            }
+
+            img {
+                filter: invert(1);
+                width: 20px;
+            }
+        }
+
+        .card-body {
+            padding: 2.25rem !important;
+        }
+
+        .card-img-top {
+            width: 50%;
+            margin: 16px auto 0;
+            height: 110px;
+            object-fit: contain;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            margin-bottom: .30rem;
+        }
+
+        .more {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .level {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+
+                ul {
+                    padding: 0;
+                    margin: 0;
+                    list-style-type: none;
+                    display: flex;
+                    margin-top: 10px;
+
+                    li {
+
+                        width: 10px;
+                        height: 10px;
+                        border: 1px solid $black;
+                        border-radius: 50%;
+                    }
+
+                    li+li {
+                        margin-left: 7px;
+                    }
+
+                    li.active {
+                        background-color: $black;
+
+                    }
+                }
+            }
+
+
+            .btn-primary {
+                background-color: $black;
+                border-color: $black;
+            }
+
+            .success {
+                color: $green !important;
+                border: 1px solid $green;
+                padding: 6px 12px 7px 12px;
+                border-radius: .25rem;
+            }
+        }
+
+    }
+}
+
+//carousel
+#carousel {
+    .media {
+        align-items: center;
+
+        @include mQ(769px) {
+            flex-direction: column;
+
+            p {
+                margin-top: 10px;
+                font-size: 1.15rem;
+                text-align: center;
+            }
+        }
+
+        @include mQ(400px) {
+            img {
+                width: 100px;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+
+        .media-body {
+            @include mQ2(769px) {
+                margin-left: 3rem;
+            }
+        }
+    }
+
+    .centr {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include mQ(769px) {
+            height: 60vh !important;
+        }
+    }
+}
+
+
+
+//add new
+
+.add {
+    padding: 0 5rem;
+
+    @include mQ(600px) {
+        padding: 0 0rem;
+    }
+
+    .add-new,
+    .image {
+        min-height: 100vh;
+    }
+
+    .bg-image {
+        background-image: url('../img/add2.svg');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .files {
+        position: relative;
+
+        &::after {
+            pointer-events: none;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 75px;
+            right: 0;
+            height: 56px;
+            content: "";
+            background-image: url(../img/down.svg);
+            display: block;
+            margin: 0 auto;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        &:before {
+
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            pointer-events: none;
+            width: 100%;
+            right: 0;
+            height: 57px;
+            content: " or drag it here. ";
+            display: block;
+            margin: 0 auto;
+            color: $dark-green;
+            font-weight: 600;
+            text-transform: capitalize;
+            text-align: center;
+
+        }
+    }
+
+    .files input {
+        outline-offset: -10px;
+        -webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
+        transition: outline-offset .15s ease-in-out, background-color .15s linear;
+        padding: 120px 0px 85px 35%;
+        text-align: center !important;
+        margin: 0;
+        width: 100% !important;
+
+        &:focus {
+            outline: 2px dashed $dark-green;
+            outline-offset: -10px;
+            -webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
+            transition: outline-offset .15s ease-in-out, background-color .15s linear;
+
+        }
+    }
+
+    .submit {
+        background: linear-gradient(to right, $dark-blue, $dark-green);
+        border: none;
+        padding: .56rem 2rem;
+    }
+
+    input {
+        padding: 1.5rem .75rem;
+    }
+
+    input,
+    textarea {
+        background-color: transparent;
+        border: 1px solid #111;
+
+        &:focus {
+            box-shadow: none;
+            border: 1px solid $dark-green;
+            background-color: transparent;
+            color: $white;
+        }
+    }
+
+    select {
+        @extend %select;
+    }
+
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+    .form-together {
+
+
+        @include mQ(600px) {
+            flex-direction: column;
+        }
+
+        .form-group {
+            &:nth-child(2) {
+                @include mQ2(600px) {
+                    margin-left: 2rem;
+                }
+            }
+
+        }
+
+
+    }
+}
+
+%select {
+    border: none;
+    outline: none;
+    padding: 3px 20px 3px 12px;
+    background: $dark-green;
+    font-weight: 600;
+    border-radius: 4px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='25' viewBox='0 0 24 24' width='25' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 3px;
+}
+
+//pricing
+.pricing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    .card {
+        border: none;
+        border-radius: 1rem;
+        transition: all 0.2s;
+        box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+        border: none;
+    }
+
+}
+
+.pricing .pricing hr {
+    margin: 1.5rem 0;
+}
+
+.pricing .card-title {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    letter-spacing: .1rem;
+    font-weight: bold;
+}
+
+.pricing .card-price {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.pricing .card-price .period {
+    font-size: 0.8rem;
+}
+
+.pricing ul {
+    text-align: left;
+
+    li {
+        margin-bottom: 1rem;
+    }
+}
+
+.pricing .text-muted {
+    opacity: 0.7;
+}
+
+.pricing .btn {
+    font-size: 80%;
+    border-radius: 5rem;
+    letter-spacing: .1rem;
+    font-weight: bold;
+    padding: 1rem;
+    opacity: 0.7;
+    transition: all 0.2s;
+}
+
+/* Hover Effects on Card */
+
+@media (min-width: 992px) {
+    .pricing .card:hover {
+        margin-top: -.25rem;
+        margin-bottom: .25rem;
+        box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
+    }
+
+    .pricing .card:hover .btn {
+        opacity: 1;
+    }
+}
+
+.carousel-indicators li {
+    background-color: $green !important;
+}
+
+
+//footer
+.footer-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        display: flex;
+
+        li {
+            color: $white;
+
+            i {
+                font-size: 1.5rem;
+            }
+        }
+
+        li+li {
+            margin-left: 20px;
+        }
+    }
+}
+
+
+//details
+.details {
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include mQ(600px) {
+        margin: 0 !important;
+    }
+
+
+
+    .card {
+        border: none;
+        border-top: 6px solid $dark-blue;
+        flex-direction: row;
+        border-radius: .25rem;
+
+        @include mQ(1200px) {
+            flex-direction: column;
+        }
+
+        form {
+            display: flex;
+            width: 100%;
+            margin: 0;
+
+            @include mQ(900px) {
+                flex-direction: column;
+            }
+        }
+
+        .card-body {
+            padding: 0 !important;
+
+            @include mQ(1200px) {
+                order: 2;
+            }
+
+            .form-together {
+
+
+                @include mQ(600px) {
+                    flex-direction: column;
+                }
+
+                .form-group {
+                    &:nth-child(2) {
+                        @include mQ2(600px) {
+                            margin-left: 2rem;
+                        }
+                    }
+
+                }
+
+
+            }
+
+            input[type=text],
+            input[type=number] {
+                border: none;
+                background: transparent;
+                box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+                padding: 1.5rem .75rem;
+
+
+            }
+
+            textarea {
+                border: none;
+                background: transparent;
+                box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+                padding: 0.7rem .75rem;
+            }
+
+            select {
+                @extend %select;
+                color: white;
+                background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='25' viewBox='0 0 24 24' width='25' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+            }
+
+
+            .action {
+                background-color: #f2f2f2;
+                padding: 1.2rem 1.5rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+
+
+    }
+
+
+
+    .card-top {
+        text-align: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-left: 1px solid #dfdfdf;
+        padding: 20px;
+
+        @include mQ(1200px) {
+            order: 1;
+        }
+
+        .card-img-top {
+            width: 250px;
+        }
+
+        .files {
+            background-color: $dark-blue;
+            padding: 11px 20px;
+            color: $white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: ease-in-out 0.3s;
+            margin-top: 2rem;
+
+            @include mQ(1200px) {
+                margin: 20px auto;
+            }
+
+            &:hover {
+                background-color: $dark-green;
+            }
+
+            svg {
+                fill: $white;
+                margin-right: 10px;
+            }
+        }
+
+        label {
+            cursor: pointer;
+
+        }
+
+        #upload-photo {
+            opacity: 0;
+            position: absolute;
+            z-index: -1;
+        }
+
+
+
+    }
+}
